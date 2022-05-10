@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head id="head">
+    <title>Loading Animation | CodingAcademy</title>
+    <link rel="stylesheet" href="Icons/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="card">
+        <div class="image-con"></div>
+        <div class="icon-con">
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-share-alt"></i>
+            <i class="fas fa-cart-shopping"></i>
+        </div>
+    </div>
+    <script>
+        var headElement = document.getElementById("head");
+        setInterval(function(){
+            var styleElement = document.createElement("style");
+            styleElement.innerHTML = ".fas::after,.image-con::after,.image-con::before{display:none}"
+            headElement.appendChild(styleElement)
+
+        },8000);
+    </script>
+</body>
+</html>
